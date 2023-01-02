@@ -4,7 +4,7 @@
   "description": "Learning Node express and mongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "start:prod": "SET NODE_ENV=production&&nodemon server.js",
     "debug": "ndb server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
@@ -45,5 +45,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "prettier": "^2.8.1"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
   }
 }
