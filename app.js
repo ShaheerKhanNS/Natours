@@ -10,6 +10,7 @@ const viewRouter = require('./Routes/viewRoutes');
 const reviewRouter = require('./Routes/reviewRoutes');
 const bookingRouter = require('./Routes/bookingRoutes');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const globalErrorHandler = require('./controllers/errorController');
 const userRouter = require('./Routes/userRoutes');
@@ -75,6 +76,8 @@ app.use(
     ],
   })
 );
+
+app.use(compression());
 
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
